@@ -14,6 +14,8 @@ Limitations : 	The max number of vertices, faces has to be harcoded.
 COMPILATION:
 
 The code has been written in Linux Ubuntu 12.04 Distro;
+usleep() may have to bre replaced by sleep() in windows.
+
 Compiled with gcc using the usual arguments 
 gcc "TRAYNEW.c" -lglut -lGLU -lGL -o "TRAYNEW"
 
