@@ -3,3 +3,24 @@ This project has some routines to convert a given polygonal mesh to a subdivisio
 Currently it supports only Catmull Clark Subdivisional Algorithm.
 
 
+
+Limitations : 	The max number of vertices, faces has to be harcoded. 
+ 					The edge points are duplicated.
+					The faces are defined using vertex indices in the C/AC direction of the vertex face
+
+					
+***** EDGE POINT CALCULATION IS WRONG:  facePt Computation remaining **** 
+
+COMPILATION:
+
+The code has been written in Linux Ubuntu 12.04 Distro;
+Compiled with gcc using the usual arguments 
+gcc "TRAYNEW.c" -lglut -lGLU -lGL -o "TRAYNEW"
+
+RUN USING ./TRAYNEW
+
+INPUT(OBJECT) FILE FORMAT
+# LINE SIZE should be less than 128
+# All Indexes start from 0
+# Vertex format: v x,y,z 
+# quad format: f v1,v2,v3,v4 
