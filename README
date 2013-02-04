@@ -1,0 +1,5 @@
+This is the public repository of Tanmay Binaykiya.\
+This project has some routines to convert a given polygonal mesh to a subdivisional mesh
+Currently it supports only Catmull Clark Subdivisional Algorithm.
+
+
