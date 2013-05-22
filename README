@@ -1,28 +1,33 @@
-This is the public repository of Tanmay Binaykiya.\
-This project has some routines to convert a given polygonal mesh to a subdivisional mesh
-Currently it supports only Catmull Clark Subdivisional Algorithm.
+
+This is the public repository of TANMAY BINAYKIYA.
+
+This project provides routines to convert a given polygonal mesh to a subdivisional mesh.
+The Algorithm used is Catmull Clark Subdivisional Algorithm.
+
+**************************************************************************************************************************
+LIMITATIONS	:
+
+ 	The max number of vertices, faces has to be harcoded. 
+	The edge points are duplicated.
+	The faces are defined using vertex indices in the counter clockwise direction.
+
+**************************************************************************************************************************
+COMPILATION	:
+
+	The code has been written in Linux Ubuntu 12.10 .
+	usleep() may have to be replaced by sleep() in windows.
+
+	Compiled with gcc using the usual arguments 
+	gcc "main.c" -lglut -lGLU -lGL -o "main"
 
 
+RUN 		:
+	run using ./main
 
-Limitations : 	The max number of vertices, faces has to be harcoded. 
- 					The edge points are duplicated.
-					The faces are defined using vertex indices in the C/AC direction of the vertex face
+**************************************************************************************************************************
+OBJECT FILE FORMAT :
 
-					
-***** EDGE POINT CALCULATION IS WRONG:  facePt Computation remaining **** 
-
-COMPILATION:
-
-The code has been written in Linux Ubuntu 12.04 Distro;
-usleep() may have to bre replaced by sleep() in windows.
-
-Compiled with gcc using the usual arguments 
-gcc "TRAYNEW.c" -lglut -lGLU -lGL -o "TRAYNEW"
-
-RUN USING ./TRAYNEW
-
-INPUT(OBJECT) FILE FORMAT
-# LINE SIZE should be less than 128
-# All Indexes start from 0
-# Vertex format: v x,y,z 
-# quad format: f v1,v2,v3,v4 
+	LINE SIZE should be less than 128
+ 	All Indexes start from 0
+ 	Vertex format: v x,y,z 
+ 	quad format: f v1,v2,v3,v4 

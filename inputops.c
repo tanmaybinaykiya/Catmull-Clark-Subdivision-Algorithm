@@ -95,24 +95,33 @@ void addFace(int F, int V){
 	}
 }
 void addEdge(int v,edge *e){
-	
+#ifdef PRINTALL	
 	printf("in add edge \n");	
+#endif	
 	if (vertices[v].edge1==NULL){
 		vertices[v].edge1=e;
+#ifdef PRINTALL	
 		printf("E1 added to v no. %d \n",v);
 		printf("E1.x1 E1.y1 = %f %f  ; E.x2, E1.y2 =  %f %f \n",(double)vertices[vertices[v].edge1->v1].x,(double)vertices[vertices[v].edge1->v1].y,(double)vertices[vertices[v].edge1->v2].x,(double)vertices[vertices[v].edge1->v2].y);
+#endif	
 	}
 	else if (vertices[v].edge2==NULL){
 		vertices[v].edge2=e;
+#ifdef PRINTALL	
 		printf("E2 added to v no. %d \n",v);
+#endif	
 	}
 	else if (vertices[v].edge3==NULL){
 		vertices[v].edge3=e;
+#ifdef PRINTALL	
 		printf("E3 added to v no. %d \n",v);
+#endif	
 	}
 	else if (vertices[v].edge4==NULL){
 		vertices[v].edge4=e;
+#ifdef PRINTALL	
 		printf("E4 added to v no. %d \n",v);
+#endif	
 	}
 	
 	
@@ -338,21 +347,31 @@ void input( void )
 				else if(line[0]=='f'){
 					int v1,v2,v3,v4;
 					sscanf (line,"f %d,%d,%d,%d ",&v1, &v2, &v3, &v4);
+#ifdef PRINTALL
 					printf("Face found: v1= %d, v2= %d, v3=%d, v4=%d  \n",v1,v2,v3,v4);
+#endif	
 					if (v1>vIndex || v2>vIndex || v3>vIndex || v4>vIndex )
+#ifdef PRINTALL
 						printf("Invalid Vertex Index \n");
+#endif	
 					else{
 						addQuad(fIndex,v1,v2,v3,v4);
 						fIndex++;
+#ifdef PRINTALL
 						printf("findex : %d \n",fIndex);
+#endif	
 					}	
 				}
 				else {
+#ifdef PRINTALL
 					 printf("INVALID LINE :  \t");
+#endif	
 					 fputs ( line, stdout ); /* write the line */
 				}
 			}
+#ifdef PRINTALL
 			printf("INPUT COMPLETE \n\tVertices scanned:\t%d \n\tFaces Scanned:\t%d \n",vIndex,fIndex);
+#endif	
 			fclose ( file );
 	}
 	else
