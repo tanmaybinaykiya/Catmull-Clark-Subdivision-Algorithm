@@ -2,8 +2,6 @@
 
 This project provides routines to convert a given polygonal mesh to a subdivisional mesh.
 
----
-
 ### Limitations
 
 * The max number of vertices, faces has to be harcoded. 
