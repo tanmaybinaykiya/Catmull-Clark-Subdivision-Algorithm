@@ -2,6 +2,17 @@
 
 This project provides routines to convert a given polygonal mesh to a subdivisional mesh.
 
+### Output
+
+Polygon: 
+
+![Polygon](./img/poly.png)
+
+After Subdivision:
+
+![Subdivision](./img/subdiv.png)
+
+
 ### Limitations
 
 * The max number of vertices, faces has to be harcoded. 
@@ -27,3 +38,5 @@ Execute:
 * All Indices start from 0
 * Vertex format: v x,y,z 
 * quad format: f v1,v2,v3,v4 
+
+
