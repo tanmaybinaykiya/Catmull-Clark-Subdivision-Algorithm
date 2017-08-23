@@ -12,7 +12,6 @@ After Subdivision:
 
 ![Subdivision](./img/subdiv.png)
 
-
 ### Limitations
 
 * The max number of vertices, faces has to be harcoded. 
@@ -21,10 +20,14 @@ After Subdivision:
 
 ### Compilation
 
+To install OpenGL 2.0 on Ubuntu 16.04
+    
+    sudo apt-get install freeglut3 freeglut3-dev libglew1.5 libglew1.5-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev
+
 Expects OpenGL 2.0 libraries to be installed.
 *usleep()* may have to be replaced by *sleep()* in windows.
 
-Compiled with gcc using the usual arguments 
+Compile with gcc using the usual arguments:
    
     gcc "main.c" -lglut -lGLU -lGL -o "main"
 
